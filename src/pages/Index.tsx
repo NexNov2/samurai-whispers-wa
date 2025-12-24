@@ -48,16 +48,19 @@ const Index = () => {
     {
       title: "A LÂMINA DA AUTORIDADE",
       description: "Comunicação de alta performance aplicada.",
+      price: "R$ 1.497,00",
       whatsappMessage: "Olá. Quero saber mais sobre A Lâmina da Autoridade"
     },
     {
       title: "ARSENAL DE INFLUÊNCIA",
       description: "Mentoria híbrida para líderes e empresários.",
+      price: "R$ 6.000,00",
       whatsappMessage: "Olá. Quero saber mais sobre o Arsenal de Influência"
     },
     {
       title: "SHOGUN IMPERATOR",
       description: "Mentoria master individual.",
+      price: "R$ 18.000,00",
       whatsappMessage: "Olá. Quero informações sobre a mentoria Shogun Imperator"
     }
   ];
@@ -66,7 +69,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section with VSL */}
+      {/* Hero Section with VSL - First Fold */}
       <section className="pt-24 md:pt-28 pb-16 md:pb-24 section-dark relative overflow-hidden">
         <div 
           className="absolute inset-0 opacity-20"
@@ -153,35 +156,62 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Urgency Section */}
+      {/* Price Section */}
       <section className="py-16 md:py-24 section-dark">
         <div className="container mx-auto px-4">
+          <div className="max-w-2xl mx-auto text-center">
+            <p className="text-lg text-muted-foreground font-medium mb-4">
+              Investimento para ativação neste ciclo
+            </p>
+            <p className="text-5xl md:text-7xl font-montserrat font-bold text-primary mb-4">
+              R$ 49,90
+            </p>
+            <p className="text-lg text-foreground/80 mb-10">
+              Acesso completo às Armas Invisíveis da Comunicação de Alta Performance
+            </p>
+            <CTAButton 
+              text="QUERO ATIVAR MINHA COMUNICAÇÃO" 
+              whatsappMessage="Olá. Vim pelo site e quero ativar minha comunicação com as Armas Invisíveis"
+              variant="primary"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Urgency Section */}
+      <section className="py-16 md:py-24 section-dark border-t-4 border-primary/50">
+        <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="bg-card p-8 md:p-12 rounded-2xl gold-border gold-glow mb-12">
-              <p className="text-2xl md:text-3xl font-montserrat font-bold text-foreground mb-6">
-                ⚔️ ATIVAÇÃO COM PRAZO. LEIA COM ATENÇÃO
+            <div className="bg-gradient-to-br from-card via-card to-primary/10 p-8 md:p-12 rounded-2xl border-2 border-primary shadow-2xl shadow-primary/20 mb-12">
+              <p className="text-2xl md:text-4xl font-montserrat font-bold text-foreground mb-6">
+                ⚔️ ATIVAÇÃO COM PRAZO
               </p>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-2">
-                Este não é um curso aberto e eterno.
+              <p className="text-xl md:text-2xl font-bold text-primary mb-6">
+                LEIA COM ATENÇÃO
               </p>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-2">
-                O ARMAS INVISÍVEIS funciona em ciclos de ativação.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                E os bônus abaixo não permanecem disponíveis após o encerramento deste ciclo.
-              </p>
+              <div className="space-y-3">
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Este não é um curso aberto e eterno.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  O ARMAS INVISÍVEIS funciona em ciclos de ativação.
+                </p>
+                <p className="text-lg text-foreground font-semibold leading-relaxed">
+                  E os bônus abaixo não permanecem disponíveis após o encerramento deste ciclo.
+                </p>
+              </div>
             </div>
 
-            {/* Countdown */}
-            <div className="mb-8">
-              <p className="text-lg text-primary font-semibold mb-6">
+            {/* Countdown with enhanced styling */}
+            <div className="bg-card p-8 md:p-10 rounded-2xl gold-border gold-glow mb-10">
+              <p className="text-xl md:text-2xl text-primary font-bold mb-6">
                 ⏳ BÔNUS DISPONÍVEIS ATÉ: 15/01/2026 às 23:59
               </p>
               <CountdownTimer targetDate={targetDate} />
             </div>
 
-            <div className="bg-card/50 p-6 rounded-xl gold-border mb-8">
-              <p className="text-muted-foreground">
+            <div className="bg-primary/10 p-6 rounded-xl border border-primary/30 mb-10">
+              <p className="text-lg text-foreground font-medium">
                 💰 Esse valor é de validação. Depois volta para R$ 97,00.
               </p>
             </div>
@@ -233,21 +263,21 @@ const Index = () => {
       </section>
 
       {/* About Juliano */}
-      <section className="py-16 md:py-24 section-light">
+      <section className="py-20 md:py-32 section-light">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-12">
+          <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-16">
             <div className="w-full md:w-2/5">
               <img 
                 src={julianoImage} 
                 alt="Juliano Silva" 
-                className="w-full max-w-sm mx-auto rounded-2xl shadow-2xl"
+                className="w-full max-w-sm mx-auto rounded-2xl shadow-2xl border-4 border-primary/20"
               />
             </div>
             <div className="w-full md:w-3/5 text-center md:text-left">
-              <h2 className="text-2xl md:text-4xl font-montserrat font-bold text-secondary-foreground mb-6">
+              <h2 className="text-3xl md:text-5xl font-montserrat font-bold text-secondary-foreground mb-8">
                 Quem é <span className="text-primary">Juliano Silva</span>
               </h2>
-              <div className="space-y-4 text-secondary-foreground/80 leading-relaxed">
+              <div className="space-y-5 text-lg text-secondary-foreground/80 leading-relaxed">
                 <p>
                   Juliano Silva é especialista em comunicação de alta performance para líderes e empresários.
                   Há 18 anos treina profissionais que ocupam posições de decisão e precisam se comunicar com clareza, autoridade e influência.
@@ -255,11 +285,22 @@ const Index = () => {
                 <p>
                   Formação em Educação, pós-graduação pela UTFPR e especializações executivas em Comunicação e Negócios pela FGV e FEBRACIS.
                 </p>
-                <p className="text-primary font-semibold italic">
+                <p className="text-xl md:text-2xl text-primary font-bold italic border-l-4 border-primary pl-6 py-2">
                   Sua filosofia é simples e direta: não é o quanto você sabe, é como você é percebido.
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Transition to High-End */}
+      <section className="py-10 md:py-14 section-dark">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-xl md:text-2xl font-montserrat font-semibold text-muted-foreground">
+              ⚔️ Para quem busca ir além, formações de alta profundidade:
+            </p>
           </div>
         </div>
       </section>
@@ -271,10 +312,33 @@ const Index = () => {
             <h2 className="text-2xl md:text-4xl font-montserrat font-bold text-center mb-12">
               Outras formações para líderes experientes
             </h2>
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-3 gap-6 mb-10">
               {highEndOptions.map((option, index) => (
                 <HighEndCard key={index} {...option} />
               ))}
+            </div>
+            
+            {/* Corporate Option */}
+            <div className="bg-background p-6 md:p-8 rounded-xl border border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 max-w-md mx-auto">
+              <h3 className="font-montserrat font-bold text-xl md:text-2xl text-primary mb-3 text-center">
+                Programas Corporativos para Empresas
+              </h3>
+              <p className="text-muted-foreground mb-6 leading-relaxed text-center">
+                Soluções personalizadas para equipes e organizações.
+              </p>
+              <div className="text-center">
+                <a
+                  href={`https://wa.me/5541984511341?text=${encodeURIComponent("Olá. Quero solicitar uma proposta corporativa")}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-primary font-semibold hover:underline transition-all"
+                >
+                  Solicitar proposta no WhatsApp
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
         </div>
