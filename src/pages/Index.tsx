@@ -178,21 +178,31 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Price & Countdown Section */}
+      {/* Urgency Section */}
       <section className="py-16 md:py-24 section-dark border-t-4 border-primary/50">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            {/* Price */}
-            <div className="mb-10">
-              <p className="text-lg text-muted-foreground font-medium mb-4">
-                Investimento para ativação neste ciclo
+            <div className="bg-gradient-to-br from-card via-card to-primary/10 p-8 md:p-12 rounded-2xl border-2 border-primary shadow-2xl shadow-primary/20 mb-12">
+              <p className="text-2xl md:text-4xl font-montserrat font-bold text-foreground mb-6">
+                ⚔️ ATIVAÇÃO COM PRAZO
               </p>
-              <p className="text-5xl md:text-7xl font-montserrat font-bold text-primary mb-4">
-                R$ 49,90
+              <p className="text-xl md:text-2xl font-bold text-primary mb-6">
+                LEIA COM ATENÇÃO
               </p>
+              <div className="space-y-3">
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Este não é um curso aberto e eterno.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  O ARMAS INVISÍVEIS funciona em ciclos de ativação.
+                </p>
+                <p className="text-lg text-foreground font-semibold leading-relaxed">
+                  E os bônus abaixo não permanecem disponíveis após o encerramento deste ciclo.
+                </p>
+              </div>
             </div>
 
-            {/* Countdown */}
+            {/* Countdown with enhanced styling */}
             <div className="bg-card p-8 md:p-10 rounded-2xl gold-border gold-glow mb-10">
               <p className="text-xl md:text-2xl text-primary font-bold mb-6">
                 ⏳ BÔNUS DISPONÍVEIS ATÉ: 15/01/2026 às 23:59
@@ -200,87 +210,157 @@ const Index = () => {
               <CountdownTimer targetDate={targetDate} />
             </div>
 
-            {/* What's Included */}
-            <div className="bg-card p-8 rounded-2xl border border-primary/30 mb-10 text-left">
-              <p className="text-xl font-montserrat font-bold text-foreground mb-6 text-center">
-                O que está incluso:
+            <div className="bg-primary/10 p-6 rounded-xl border border-primary/30 mb-10">
+              <p className="text-lg text-foreground font-medium">
+                💰 Esse valor é de validação. Depois volta para R$ 97,00.
               </p>
-              <div className="space-y-4 max-w-md mx-auto">
-                <div className="flex items-start gap-3">
-                  <span className="text-primary text-xl">✓</span>
-                  <span className="text-foreground/90">20 aulas curtas e práticas</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <span className="text-primary text-xl">✓</span>
-                  <span className="text-foreground/90">Cortes de mentorias e sessões reais</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <span className="text-primary text-xl">✓</span>
-                  <span className="text-foreground/90">Material em PDF e checklists Shogun</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <span className="text-primary text-xl">✓</span>
-                  <span className="text-foreground/90">Sessão Executiva Shogun ao vivo (apenas para os 50 primeiros inscritos)</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <span className="text-primary text-xl">✓</span>
-                  <span className="text-foreground/90">Acesso via plataforma responsiva</span>
-                </div>
-              </div>
             </div>
 
-            {/* Bonuses */}
-            <div className="bg-gradient-to-br from-card via-card to-primary/10 p-8 md:p-10 rounded-2xl border-2 border-primary shadow-2xl shadow-primary/20 mb-10">
-              <p className="text-2xl md:text-3xl font-montserrat font-bold text-primary mb-8">
-                🎁 BÔNUS EXCLUSIVOS
-              </p>
-              
-              <div className="space-y-6 text-left max-w-lg mx-auto">
-                {/* Bonus 1 */}
-                <div className="bg-background/50 p-5 rounded-xl border border-primary/20">
-                  <div className="flex justify-between items-start flex-wrap gap-2 mb-2">
-                    <span className="font-bold text-foreground">Bônus 1</span>
-                    <span className="text-sm text-primary font-semibold">até 31 dezembro</span>
-                  </div>
-                  <p className="text-foreground/90 mb-2">Checklist Shogun de Comunicação Executiva</p>
-                  <p className="text-muted-foreground text-sm">Valor: <span className="line-through">R$ 97</span></p>
-                </div>
-
-                {/* Bonus 2 */}
-                <div className="bg-background/50 p-5 rounded-xl border border-primary/20">
-                  <div className="flex justify-between items-start flex-wrap gap-2 mb-2">
-                    <span className="font-bold text-foreground">Bônus 2</span>
-                    <span className="text-sm text-primary font-semibold">até 7 janeiro</span>
-                  </div>
-                  <p className="text-foreground/90 mb-2">Whitepaper Premium "A Lâmina Infalível da Comunicação Samurai"</p>
-                  <p className="text-muted-foreground text-sm">Valor: <span className="line-through">R$ 197</span></p>
-                </div>
-
-                {/* Bonus 3 */}
-                <div className="bg-background/50 p-5 rounded-xl border border-primary/20">
-                  <div className="flex justify-between items-start flex-wrap gap-2 mb-2">
-                    <span className="font-bold text-foreground">Bônus 3</span>
-                    <span className="text-sm text-primary font-semibold">até 15 janeiro</span>
-                  </div>
-                  <p className="text-foreground/90 mb-2">Sessão Executiva Shogun no Zoom (ao vivo)</p>
-                  <p className="text-muted-foreground text-sm">Valor: <span className="line-through">R$ 297</span></p>
-                </div>
-              </div>
-
-              <div className="mt-8 pt-6 border-t border-primary/30">
-                <p className="text-lg text-foreground">
-                  Valor total dos bônus: <span className="font-bold text-primary">R$ 591,00</span>
-                </p>
-                <p className="text-foreground/80">Incluídos gratuitamente no treinamento.</p>
-              </div>
-            </div>
-
-            {/* CTA Button */}
             <CTAButton 
               text="QUERO DESTRAVAR MINHA COMUNICAÇÃO" 
               whatsappMessage="Olá. Vim pelo site e quero destravar minha comunicação com as Armas Invisíveis"
               variant="primary"
             />
+          </div>
+        </div>
+      </section>
+
+      {/* Social Proof Video */}
+      <section className="py-16 md:py-24 section-dark">
+        <div className="container mx-auto px-4">
+          <div className="max-w-md mx-auto">
+            <div className="relative w-full overflow-hidden rounded-xl gold-border gold-glow">
+              <div className="relative pt-[177.78%]">
+                <iframe
+                  src="https://player.vimeo.com/video/1133995540?badge=0&autopause=0&player_id=0&app_id=58479"
+                  title="Depoimentos"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowFullScreen
+                  className="absolute top-0 left-0 w-full h-full"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Written Testimonials */}
+      <section className="py-16 md:py-24 section-dark">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-12">
+            {testimonials.map((testimonial, index) => (
+              <TestimonialCard key={index} {...testimonial} />
+            ))}
+          </div>
+          <div className="text-center">
+            <CTAButton 
+              text="QUERO ENTENDER COMO FUNCIONA PRA MIM" 
+              whatsappMessage="Olá. Vi os depoimentos no site e quero entender como isso funciona pra mim"
+              variant="primary"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* About Juliano */}
+      <section className="py-20 md:py-32 section-light">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-16">
+            <div className="w-full md:w-2/5">
+              <img 
+                src={julianoImage} 
+                alt="Juliano Silva" 
+                className="w-full max-w-sm mx-auto rounded-2xl shadow-2xl border-4 border-primary/20"
+              />
+            </div>
+            <div className="w-full md:w-3/5 text-center md:text-left">
+              <h2 className="text-3xl md:text-5xl font-montserrat font-bold text-secondary-foreground mb-8">
+                Quem é <span className="text-primary">Juliano Silva</span>
+              </h2>
+              <div className="space-y-5 text-lg text-secondary-foreground/80 leading-relaxed">
+                <p>
+                  Juliano Silva é especialista em comunicação de alta performance para líderes e empresários.
+                  Há 18 anos treina profissionais que ocupam posições de decisão e precisam se comunicar com clareza, autoridade e influência.
+                </p>
+                <p>
+                  Formação em Educação, pós-graduação pela UTFPR e especializações executivas em Comunicação e Negócios pela FGV e FEBRACIS.
+                </p>
+                <p className="text-xl md:text-2xl text-primary font-bold italic border-l-4 border-primary pl-6 py-2">
+                  Sua filosofia é simples e direta: não é o quanto você sabe, é como você é percebido.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Transition to High-End */}
+      <section className="py-10 md:py-14 section-dark">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-xl md:text-2xl font-montserrat font-semibold text-muted-foreground">
+              ⚔️ Para quem busca ir além, formações de alta profundidade:
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* High-End Options */}
+      <section className="py-16 md:py-24 section-gold">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-2xl md:text-4xl font-montserrat font-bold text-center mb-12">
+              Outras formações para líderes experientes
+            </h2>
+            <div className="grid md:grid-cols-3 gap-6 mb-10">
+              {highEndOptions.map((option, index) => (
+                <HighEndCard key={index} {...option} />
+              ))}
+            </div>
+            
+            {/* Corporate Option */}
+            <div className="bg-background p-6 md:p-8 rounded-xl border border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 max-w-md mx-auto">
+              <h3 className="font-montserrat font-bold text-xl md:text-2xl text-primary mb-3 text-center">
+                Programas Corporativos para Empresas
+              </h3>
+              <p className="text-muted-foreground mb-6 leading-relaxed text-center">
+                Soluções personalizadas para equipes e organizações.
+              </p>
+              <div className="text-center">
+                <a
+                  href={`https://wa.me/5541984511341?text=${encodeURIComponent("Olá. Quero solicitar uma proposta corporativa")}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-primary font-semibold hover:underline transition-all"
+                >
+                  Solicitar proposta no WhatsApp
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Shogun Session */}
+      <section className="py-16 md:py-24 section-dark">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <div className="bg-card p-8 md:p-12 rounded-2xl gold-border gold-glow">
+              <p className="text-xl md:text-2xl font-montserrat font-bold text-foreground mb-4">
+                ⚔️ Sessão Executiva Shogun ao vivo
+              </p>
+              <p className="text-lg text-primary font-semibold mb-8">
+                Apenas para os 50 primeiros inscritos.
+              </p>
+              <CTAButton 
+                text="QUERO GARANTIR MINHA VAGA NA SESSÃO SHOGUN" 
+                whatsappMessage="Olá. Quero saber como funciona a Sessão Executiva Shogun ao vivo"
+                variant="primary"
+              />
+            </div>
           </div>
         </div>
       </section>
